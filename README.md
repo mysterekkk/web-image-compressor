@@ -1,5 +1,5 @@
 # Web Image Compressor & WebP Converter
-Free online image compressor &amp; WebP converter – runs 100% in your browser. Open-source by LuroWeb.pl.
+Open-source by LuroWeb.pl.
 
 
 Free, open-source image compressor that runs **100% in your browser**.  
