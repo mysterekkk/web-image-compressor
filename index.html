@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Web Image Compressor & WebP Converter | LuroWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Free online image compressor and WebP converter. Compress JPG, PNG and WebP in your browser. No upload, 100% private. Open-source." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="logo-dot"></span>
+      <span class="brand-text">Web Image Compressor</span>
+    </div>
+    <nav class="nav-links">
+      <a href="https://github.com/mysterekkk" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://luroweb.pl" target="_blank" rel="noopener">LuroWeb.pl</a>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <section class="hero">
+      <h1>Free Image Compressor & WebP Converter</h1>
+      <p>Compress and convert images directly in your browser. No upload, no tracking, 100% privacy.</p>
+      <ul class="hero-bullets">
+        <li>🔁 Batch compression (multiple files at once)</li>
+        <li>📦 Convert to JPG, PNG or WebP</li>
+        <li>⚡ Runs in your browser using HTML5 Canvas</li>
+      </ul>
+    </section>
+
+    <section class="controls">
+      <div class="control-group">
+        <label for="quality">Quality: <span id="qualityValue">80</span>%</label>
+        <input type="range" id="quality" min="10" max="100" value="80" />
+      </div>
+
+      <div class="control-group">
+        <label for="format">Output format</label>
+        <select id="format">
+          <option value="original">Keep original format</option>
+          <option value="image/jpeg">JPEG (.jpg)</option>
+          <option value="image/png">PNG (.png)</option>
+          <option value="image/webp">WebP (.webp)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="maxSize">Max size (longest edge)</label>
+        <select id="maxSize">
+          <option value="0">Original size</option>
+          <option value="3840">3840 px (4K)</option>
+          <option value="2560">2560 px</option>
+          <option value="1920" selected>1920 px</option>
+          <option value="1280">1280 px</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="uploader">
+      <div id="dropZone" class="drop-zone">
+        <input type="file" id="fileInput" accept="image/*" multiple />
+        <p class="drop-title">Drop your images here or click to browse</p>
+        <p class="drop-subtitle">JPG, PNG, WebP – multiple files supported</p>
+      </div>
+      <button id="clearBtn" class="btn-secondary" type="button">Clear results</button>
+    </section>
+
+    <section class="results-section">
+      <h2>Results</h2>
+      <div id="results" class="results-grid">
+        <p class="results-placeholder">No images processed yet. Drop some files above 👆</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Open-source project by
+      <a href="https://github.com/mysterekkk" target="_blank" rel="noopener">@mysterekkk</a>,
+      realization by <a href="https://luroweb.pl" target="_blank" rel="noopener">LuroWeb.pl</a>
+    </p>
+  </footer>
+
+  <canvas id="hiddenCanvas" class="hidden" aria-hidden="true"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
